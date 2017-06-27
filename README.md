@@ -4,9 +4,9 @@
 ![Code Climate](https://codeclimate.com/github/torrancejr/fitbit.png)
 ![Coverage Status](https://coveralls.io/repos/torrancejr/fitbit/badge.png)
 
-Rock on Philly is a React/Ruby based concert venue website. The application uses a background worker to fetch from the Yelp API to populate an up to date database of all concert venues in the Philadelphia area. Users can sign up and navigate through website to see locations, reviews, and photos of each venue.
+Fit Git is a Ruby based fitness tracking/challenge website. The application uses a background worker to fetch from the Fitbit API to populate an up to date database of all user activites. Users can sign up and navigate through their goals, activites an challenges others.
 
-Meaghan Conroy, Chris Casella, and Ryan Torrance
+Ryan Torrance
 
 Heroku link: https://something.herokuapp.com/
 
