@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
 
   def create
-    binding.pry
+    binding.pry                                                                                                         
     auth_hash = request.env['omniauth.auth']
 
     render :text => auth_hash.inspect
