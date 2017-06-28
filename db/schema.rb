@@ -10,9 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170628211219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "fitbit_data", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "content"
+    t.string "date"
+    t.string "resource_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date", "resource_type"], name: "index_fitbit_data_on_date_and_resource_type"
+    t.index ["user_id"], name: "index_fitbit_data_on_user_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "uid"
+    t.string "provider"
+    t.string "access_token"
+    t.string "refresh_token"
+    t.string "timezone"
+    t.integer "expires_at"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "email"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "fitbit_data", "users"
 end
