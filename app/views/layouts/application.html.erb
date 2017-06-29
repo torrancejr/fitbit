@@ -15,8 +15,12 @@
   </head>
 
   <body>
-
+  <% if current_user %>
+    Signed in as <strong><%= current_user.uid %></strong>!
+    <%= link_to "Sign out", signout_path %>
+    <% else %>
     <a href="/auth/fitbit">Sign In</a>
+    <% end %>
 
     <%= yield %>
 

@@ -1,16 +1,19 @@
 class User < ActiveRecord::Base
   has_one :profile
 
-  def self.find_or_create_from_omniauth(auth)
+  def self.from_omniauth(auth)
     provider = auth.provider
     uid = auth.uid
 
-    find_or_create_by(provider: provider, uid: uid) do |user|
-      user.provider = provider
+    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.uid = uid
-      user.name = auth.info.name
-      user.email = auth.info.email
-      user.picture = auth.info.image
+      user.provider = provider
+      user.timezone = auth.info.timezone
+      user.access_token =  auth.credentials.token
+      user.refresh_token = auth.credentials.refresh_token
+      user.expires_at = Time.at(auth.credentials.expires_at)
+      user.save
+
     end
   end
 end

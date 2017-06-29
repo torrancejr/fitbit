@@ -1,13 +1,13 @@
-class CreateUsers < ActiveRecord::Migration[5.1]
+class CreateProfiles < ActiveRecord::Migration[5.1]
   def change
-    create_table :users do |t|
+    create_table :profiles do |t|
       t.string   :provider
       t.string   :uid
       t.string   :name
       t.string   :email
-      t.string   :picture
       t.datetime :created_at, null: false
       t.datetime :updated_at, null: false
+      t.references :user
 
     end
   end
