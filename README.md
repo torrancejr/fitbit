@@ -4,7 +4,7 @@
 ![Code Climate](https://codeclimate.com/github/torrancejr/fitbit.png)
 ![Coverage Status](https://coveralls.io/repos/torrancejr/fitbit/badge.png)
 
-Rock on Philly is a React/Ruby based concert venue website. The application uses a background worker to fetch from the Yelp API to populate an up to date database of all concert venues in the Philadelphia area. Users can sign up and navigate through website to see locations, reviews, and photos of each venue.
+FitLife is a React/Ruby based health activity website. The application uses a background worker to fetch from the Fitbit API to populate an up to date database of all user acitivity. Users can sign up and navigate through website to see activity log, follow friends, and challenges themselves.
 
 Meaghan Conroy, Chris Casella, and Ryan Torrance
 
