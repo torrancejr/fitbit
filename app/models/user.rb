@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
     provider = auth.provider
     uid = auth.uid
 
-    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.uid = uid
       user.provider = provider
       user.timezone = auth.info.timezone

@@ -1,1 +1,14 @@
-<h1>Activities. </h1>
+
+<div class="page-header">
+  <h1>Here is some info about you</h1>
+</div>
+<div class="page-body">
+  <ul>
+    <li><strong>User:</strong><%= current_user.id %></li>
+    <li><strong>Provider:</strong><%= current_user.provider %></li>
+    <li><strong>Timezone:</strong><%= current_user.timezone %></li>  
+  </ul>
+</div>
+
+
+<h2>Activity Log</h2>

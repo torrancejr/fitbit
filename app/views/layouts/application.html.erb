@@ -13,16 +13,28 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-
-  <body>
-  <% if current_user %>
-    Signed in as <strong><%= current_user.uid %></strong>!
-    <%= link_to "Sign out", signout_path %>
-    <% else %>
-    <a href="/auth/fitbit">Sign In</a>
-    <% end %>
-
-    <%= yield %>
-
+  <ul class="menu menu-hover-lines">
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="#">Friends</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Challenges</a></li>
+    <li><a href="/activities/:id">Activity</a></li>
+    <li><a href="/profiles">Profiles</a></li>
+  </ul>
+  <div class="row">
+    <div class="small-12 small-centered columns">
+      <body>
+        <%= yield %>
+        <% if current_user %>
+            Signed in as <strong><%= current_user.uid %></strong>!
+          <%= link_to "Sign out", signout_path %>
+        <% else %>
+        <a href="/auth/fitbit" class="button round">Sign In</a>
+        <% end %>
+        </div>
+      </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.magellan.js"></script>
   </body>
 </html>
