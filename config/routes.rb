@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :sessions
   resources :users
   resources :profiles
-  resources :fit_data
+  resources :fitbit_data
 
 end

@@ -60,8 +60,8 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
-$yellow: #E6F99D;
+$white: #ffffff;
+$yellow: #faff8c;
 $green: #259073;
 $light-green: #259073;
 $lighter-green: #7FDA89;
@@ -248,7 +248,7 @@ $breadcrumbs-item-slash: true;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: #041122;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
@@ -316,7 +316,7 @@ $closebutton-size: (
   medium: 2em,
 );
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
+$closebutton-color: #041122;
 $closebutton-color-hover: $black;
 
 // 16. Drilldown

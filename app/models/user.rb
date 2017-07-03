@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_one :profile
+  has_many :activities
+  has_many :fit_data
 
   def self.from_omniauth(auth)
     provider = auth.provider
