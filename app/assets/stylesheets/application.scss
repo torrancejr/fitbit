@@ -45,7 +45,7 @@
      position: absolute;
      content: '';
      transition: $menu-hover-lines-transition;
-     background-color: #041122;
+     background-color: #036564;
      width: 0;
    }
 
@@ -133,5 +133,91 @@
   }
   input::placeholder {
     color: #041122;
+  }
+}
+
+$hero-height: 60vh;
+
+.hero-section {
+  background: url('https://static.pexels.com/photos/196464/pexels-photo-196464.jpeg') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #2c3840;
+  }
+}
+
+//heart
+
+.interface-component {
+  font-family: 'Fredericka the Great', cursive;
+  color: #041122;
+  width: 160px;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.interface-component-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.interface-module {
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.interface-module .interface-module-title {
+  text-transform: uppercase;
+}
+
+.interface-module .interface-module-element {
+  position: relative;
+}
+
+.interface-module .interface-module-element > span {
+  display: block;
+  font-size: 16px;
+}
+
+.interface-module .interface-module-element-console > span {
+  margin-left: 16px;
+}
+
+.icon-heart {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -webkit-animation-name: animation-heart;
+  animation-name: animation-heart;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animation-heart {
+  0% {
+    width: 18px;
+  }
+  100% {
+    width: 13px;
+  }
+}
+
+@keyframes animation-heart {
+  0% {
+    width: 18px;
+  }
+  100% {
+    width: 13px;
   }
 }

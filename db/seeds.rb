@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 def user_profile
-  binding.pry
 {
 "user":{
 "age": 31,

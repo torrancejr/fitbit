@@ -6,7 +6,13 @@ var config = {
     path: './app/assets/javascripts',
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx', 'index.js', 'index.jsx', '.json', 'index.json']
+  },
   module: {
+    preLoaders: [
+        { test: /\.json$/, exclude: /node_modules/, loader: 'json'},
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
