@@ -7,18 +7,26 @@
     @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Josefin+Slab');
     </style>
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-
+    <title><%= content_for?(:title) ? yield(:title) : "FIT LIFE" %></title>
+    
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
     <nav class="hover-underline-menu" data-menu-underline-from-center>
       <ul class="menu align-center">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/activities/:id">ACTIVITY</a></li>
-        <li><a href="/profiles/new">PROFILE</a></li>
-        <li><a href="/fitbitdatum">FIT DATA</a></li>
+        <li>
+          <%= link_to "HOME", root_path %>
+        </li>
+        <li>
+          <a href="/activities/:id">ACTIVITY</a>
+        </li>
+        <li>
+          <%= link_to "PROFILE", profiles_path %>
+        </li>
+        <li>
+          <%= link_to "FIT DATA", fitbitdatum_index_path %>
+        </li>
       </ul>
     </nav>
     <div class="row">

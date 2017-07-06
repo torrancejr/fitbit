@@ -15,6 +15,11 @@
  *= require foundation_and_overrides
 
  */
+
+ @import "font-awesome-sprockets";
+@import "font-awesome";
+
+
  .column.small-centered {
  margin-left: auto;
  margin-right: auto;
@@ -220,4 +225,11 @@ $hero-height: 60vh;
   100% {
     width: 13px;
   }
+}
+
+//flexcards for article show page
+
+.callout-hover-reveal .callout-footer {
+  background-color: #ffffff;
+  display: none;
 }

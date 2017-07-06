@@ -30,6 +30,7 @@ gem 'rails_12factor'
 gem 'rest-client'
 gem 'sendgrid-ruby'
 gem 'simplecov'
+gem 'font-awesome-sass'
 
 group :test do
   gem 'coveralls', require: false
