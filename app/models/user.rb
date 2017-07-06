@@ -10,11 +10,11 @@ class User < ActiveRecord::Base
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.uid = uid
       user.provider = provider
-      user.full_name = auth.info.full_name
       user.timezone = auth.info.timezone
       user.access_token =  auth.credentials.token
       user.refresh_token = auth.credentials.refresh_token
       user.expires_at = Time.at(auth.credentials.expires_at)
+      user.full_name = auth.info.full_name
       user.save
 
     end
