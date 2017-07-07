@@ -19,16 +19,13 @@
           <%= link_to "HOME", root_path %>
         </li>
         <li>
-          <a href="/activities/:id">ACTIVITY</a>
+          <%= link_to "FIT ACTIVITY", fitbitdatum_index_path %>
         </li>
         <li>
-          <a href="/fitbitdatum/:id">FIT FRIENDS</a></a>
+          <%= link_to "FIT FRIENDS", new_fitbitdatum_path %>
         </li>
         <li>
-          <%= link_to "FIT ACTIVITY", charts_path %>
-        </li>
-        <li>
-          <%= link_to "FIT ARTICLES", fitbitdatum_index_path %>
+          <%= link_to "FIT CHARTS", charts_path %>
         </li>
       </ul>
     </nav>

@@ -1,1 +1,77 @@
-<div id="app"></div>
+<h1>Activities Details Page</h1>
+
+<div class="callout callout-hover-reveal" data-callout-hover-reveal>
+  <div class="callout-body">
+    <h2>Activity Info</h2>
+    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+  </div>
+  <div class="callout-footer">
+    <h6><%= image_tag @user_data["user"]["avatar150"] %></h6>
+    <ul>
+      <li>
+        Name: <%=  @user_data["user"]["fullName"] %>
+      </li>
+      <li>
+        DOB: <%=  @user_data["user"]["dateOfBirth"] %>
+      </li>
+      <li>
+        Age:  <%=  @user_data["user"]["age"] %>
+      </li>
+      <li>
+        Height: <%=  @user_data["user"]["height"] %>
+      </li>
+      <li>
+        Weight: <%=  @user_data["user"]["weight"] %>
+      </li>
+      <li>
+        Member Since: <%=  @user_data["user"]["memberSince"] %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout callout-hover-reveal" data-callout-hover-reveal>
+  <div class="callout-body">
+    <h2>Sleep Info</h2>
+    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+  </div>
+  <div class="callout-footer">
+    <ul>
+      <li>
+        Total Minutes Asleep: <%=  @user_sleep["summary"]["totalMinutesAsleep"] %>
+      </li>
+      <li>
+        Total Time in Bed: <%=  @user_sleep["summary"]["totalTimeInBed"] %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout callout-hover-reveal" data-callout-hover-reveal>
+  <div class="callout-body">
+    <h2>Heart Info</h2>
+    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+  </div>
+  <div class="callout-footer">
+    <ul>
+      <li>
+        <%= @user_heart["average"][0]["tracker"] %>
+        <%= @user_heart["average"][0]["heartRate"] %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout callout-hover-reveal" data-callout-hover-reveal>
+  <div class="callout-body">
+    <h2>Weight Info</h2>
+    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+  </div>
+  <div class="callout-footer">
+    <ul>
+      <li>
+        <%= @user_weight["weight"] %>
+      </li>
+    </ul>
+  </div>
+</div>
