@@ -15,6 +15,7 @@
   </head>
     <nav class="hover-underline-menu" data-menu-underline-from-center>
       <ul class="menu align-center">
+          <% if current_user %>
         <li>
           <%= link_to "HOME", root_path %>
         </li>
@@ -27,6 +28,14 @@
         <li>
           <%= link_to "FIT CHARTS", charts_path %>
         </li>
+        <% else %>
+        <li>
+          <%= link_to "HOME", root_path %>
+        </li>
+        <li>
+          <%= link_to "FIT ACTIVITY", fitbitdatum_index_path %>
+        </li>
+        <% end %>
       </ul>
     </nav>
     <div class="row">
