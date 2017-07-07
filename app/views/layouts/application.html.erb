@@ -22,10 +22,13 @@
           <a href="/activities/:id">ACTIVITY</a>
         </li>
         <li>
-          <%= link_to "PROFILE", profiles_path %>
+          <a href="/fitbitdatum/:id">FIT FRIENDS</a></a>
         </li>
         <li>
-          <%= link_to "FIT DATA", fitbitdatum_index_path %>
+          <%= link_to "FIT ACTIVITY", charts_path %>
+        </li>
+        <li>
+          <%= link_to "FIT ARTICLES", fitbitdatum_index_path %>
         </li>
       </ul>
     </nav>
@@ -41,8 +44,5 @@
           <% end %>
         </div>
     </div>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.magellan.js"></script>
   </body>
 </html>
