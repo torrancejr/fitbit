@@ -114,32 +114,6 @@
    }
  }
 
-// form
- $translucent-form-overlay-max-width: 500px;
-
-.translucent-form-overlay {
-  max-width: $translucent-form-overlay-max-width;
-  width: 100%;
-  background-color: #259073;
-  padding: 20px;
-  color: #ffffff;
-
-
-  // workaround 6.3.0 bug
-  .columns.row {
-    display: block;
-  }
-
-  h3, label {
-    color: #ffffff;
-  }
-  input, select {
-    color: #2c3840;
-  }
-  input::placeholder {
-    color: #041122;
-  }
-}
 
 $hero-height: 60vh;
 
@@ -156,80 +130,4 @@ $hero-height: 60vh;
     color: #ffffff;
     text-shadow: 1px 1px 2px #2c3840;
   }
-}
-
-//heart
-
-.interface-component {
-  font-family: 'Fredericka the Great', cursive;
-  color: #041122;
-  width: 160px;
-  font-size: 13px;
-  line-height: 24px;
-  text-align: center;
-  margin: 30px auto;
-}
-
-.interface-component-title {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.interface-module {
-  line-height: 24px;
-  margin-bottom: 24px;
-}
-
-.interface-module .interface-module-title {
-  text-transform: uppercase;
-}
-
-.interface-module .interface-module-element {
-  position: relative;
-}
-
-.interface-module .interface-module-element > span {
-  display: block;
-  font-size: 16px;
-}
-
-.interface-module .interface-module-element-console > span {
-  margin-left: 16px;
-}
-
-.icon-heart {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  -webkit-animation-name: animation-heart;
-  animation-name: animation-heart;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes animation-heart {
-  0% {
-    width: 18px;
-  }
-  100% {
-    width: 13px;
-  }
-}
-
-@keyframes animation-heart {
-  0% {
-    width: 18px;
-  }
-  100% {
-    width: 13px;
-  }
-}
-
-//flexcards for article show page
-
-.callout-hover-reveal .callout-footer {
-  background-color: #ffffff;
-  display: none;
 }
