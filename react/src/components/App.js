@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import TodoList from './todolist';
 import AddTodo from './addtodo';
 import TodoSearch from './todosearch';
-let uuid = require ('node-uuid');
+import uuid from 'node-uuid';
 
-var App = React.createClass ({
-  getInitialState: function () {
+const App = React.createClass ({
+  getInitialState() {
     return {
       showCompleted: false,
       searchText: '',
@@ -25,26 +25,26 @@ var App = React.createClass ({
     };
   },
 
-  handleAddTodo: function (text) {
+  handleAddTodo(text) {
     this.setState({
       todos: [
         ...this.state.todos,
         {
           id: uuid(),
-          text: text
+          text
         }
       ]
     });
   },
 
-  handleSearch: function (showCompleted, searchText) {
+  handleSearch(showCompleted, searchText) {
     this.setState({
-      showCompleted: showCompleted,
+      showCompleted,
       searchText: searchText.toLowerCase()
     });
   },
-  render: function () {
-    var {todos} = this.state;
+  render() {
+    const {todos} = this.state;
 
     return (
       <div>
