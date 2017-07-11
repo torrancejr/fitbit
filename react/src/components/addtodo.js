@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
-class AddTodo extends Component{
-
-  handleSubmit(e) {
+var AddTodo = React.createClass({
+  handleSubmit: function(e) {
     e.preventDefault();
-    let todoText = this.refs.todoText.value;
+    var todoText = this.refs.todoText.value;
 
     if (todoText.length > 0) {
-      this.refs.todoText.value = '';
-      this.props.onAddTodo(todoText);
+    this.refs.todoText.value = '';
+    this.props.onAddTodo(todoText);
     } else {
       this.refs.todoText.focus();
     }
-  }
-  render() {
+  },
+
+  render: function () {
 
     return(
       <div>
@@ -27,8 +27,8 @@ class AddTodo extends Component{
         </form>
       </div>
 
-    )
+    );
   }
-};
+});
 
-export default AddTodo;
+module.exports = AddTodo;

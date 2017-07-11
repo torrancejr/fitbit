@@ -2,50 +2,58 @@ import React, { Component } from 'react';
 import TodoList from './todolist';
 import AddTodo from './addtodo';
 import TodoSearch from './todosearch';
+let uuid = require ('node-uuid');
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+var App = React.createClass ({
+  getInitialState: function () {
+    return {
       showCompleted: false,
       searchText: '',
       todos: [
           {
-          id:1,
+          id: uuid(),
           text: 'No Carbs'
         },  {
-          id:2,
+          id: uuid(),
           text: 'Run a 5k'
         },
         {
-          id:3,
+          id: uuid(),
           text: 'Lose 5 lbs'
         }
       ]
-    }
-  }
+    };
+  },
 
-  handleAddTodofunction(){
-    alert('new todo:' + text);
-  }
+  handleAddTodo: function (text) {
+    this.setState({
+      todos: [
+        ...this.state.todos,
+        {
+          id: uuid(),
+          text: text
+        }
+      ]
+    });
+  },
 
-  handleSearch(showCompleted, searchText) {
+  handleSearch: function (showCompleted, searchText) {
     this.setState({
       showCompleted: showCompleted,
       searchText: searchText.toLowerCase()
-    })
+    });
+  },
+  render: function () {
+    var {todos} = this.state;
 
-  }
-
-  render() {
-    let {todos} = this.state;
     return (
       <div>
         <TodoSearch onSearch={this.handleSearch} />
         <TodoList todos={todos} />
-        <AddTodo onAddTdo={this.handleAddTodofunction} />
+        <AddTodo onAddTodo={this.handleAddTodo} />
       </div>
-    );
+    )
   }
-};
+});
+
 export default App;

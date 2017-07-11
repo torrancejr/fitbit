@@ -43,6 +43,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
+    "node-uuid": "^1.4.8",
     "phantomjs-prebuilt": "^2.1.14",
     "react-addons-test-utils": "^15.6.0",
     "redux-devtools": "^3.2.0"
