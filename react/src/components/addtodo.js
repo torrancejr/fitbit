@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-var AddTodo = React.createClass({
-  handleSubmit: function(e) {
+const AddTodo = React.createClass({
+  handleSubmit(e) {
     e.preventDefault();
-    var todoText = this.refs.todoText.value;
+    const todoText = this.refs.todoText.value;
 
     if (todoText.length > 0) {
     this.refs.todoText.value = '';
@@ -13,7 +13,7 @@ var AddTodo = React.createClass({
     }
   },
 
-  render: function () {
+  render() {
 
     return(
       <div>
@@ -31,4 +31,4 @@ var AddTodo = React.createClass({
   }
 });
 
-module.exports = AddTodo;
+export default AddTodo;
