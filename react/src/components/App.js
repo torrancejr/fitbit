@@ -37,6 +37,20 @@ const App = React.createClass ({
     });
   },
 
+<<<<<<< HEAD
+=======
+  handleToggle: function (id) {
+    let updatesTodos = this.state.todos.map((todo) => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed;
+        }
+
+      return todo;
+    });
+    this.setState({todos: updatesTodos});
+; },
+
+>>>>>>> react_rocks
   handleSearch(showCompleted, searchText) {
     this.setState({
       showCompleted,
