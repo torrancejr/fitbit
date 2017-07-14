@@ -12,14 +12,17 @@ const App = React.createClass ({
       todos: [
           {
           id: uuid(),
-          text: 'No Carbs'
+          text: 'No Carbs',
+          completed: true
         },  {
           id: uuid(),
-          text: 'Run a 5k'
+          text: 'Run a 5k',
+          completed: false
         },
         {
           id: uuid(),
-          text: 'Lose 5 lbs'
+          text: 'Lose 5 lbs',
+          completed: true
         }
       ]
     };
@@ -31,14 +34,13 @@ const App = React.createClass ({
         ...this.state.todos,
         {
           id: uuid(),
-          text
+          text: text,
+          completed: false
         }
       ]
     });
   },
 
-<<<<<<< HEAD
-=======
   handleToggle: function (id) {
     let updatesTodos = this.state.todos.map((todo) => {
         if (todo.id === id) {
@@ -50,7 +52,6 @@ const App = React.createClass ({
     this.setState({todos: updatesTodos});
 ; },
 
->>>>>>> react_rocks
   handleSearch(showCompleted, searchText) {
     this.setState({
       showCompleted,
@@ -63,7 +64,7 @@ const App = React.createClass ({
     return (
       <div>
         <TodoSearch onSearch={this.handleSearch} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} onToggle={this.handleToggle}/>
         <AddTodo onAddTodo={this.handleAddTodo} />
       </div>
     )
