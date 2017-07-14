@@ -55,7 +55,7 @@ const App = React.createClass ({
       return todo;
     });
     this.setState({todos: updatesTodos});
-;  },
+; },
 
   handleSearch(showCompleted, searchText) {
     this.setState({
