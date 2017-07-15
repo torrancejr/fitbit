@@ -22,11 +22,6 @@ $('[data-callout-hover-reveal]').hover(function(){
   });
 })
 
-// function getData(date) {//ajax call??
-//      var tmpData = JSON.parse('{"sleep-minutesAsleep":[{"dateTime":"2016-08-05","value":"509"},{"dateTime":"2016-08-06","value":"523"},{"dateTime":"2016-08-07","value":"458"},{"dateTime":"2016-08-08","value":"440"},{"dateTime":"2016-08-09","value":"229"},{"dateTime":"2016-08-10","value":"375"},{"dateTime":"2016-08-11","value":"529"}]}');
-//      return tmpData["sleep-minutesAsleep"];
-//    }
-
 $(function () {
 
 
