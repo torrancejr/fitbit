@@ -14,6 +14,7 @@
 //= require jquery
 //= require_tree
 
+
 $(function(){
 $('[data-callout-hover-reveal]').hover(function(){
   $(this).find('.callout-footer').slideDown(250);
@@ -21,6 +22,7 @@ $('[data-callout-hover-reveal]').hover(function(){
   $(this).find('.callout-footer').slideUp(250);
   });
 })
+
 
 $(function () {
 
@@ -188,7 +190,5 @@ $(function () {
 
 
 });
-
-$(function(){ $(document).foundation(); });
 
 $("[data-menu-underline-from-center] a").addClass("underline-from-center");
