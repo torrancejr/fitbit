@@ -31,6 +31,7 @@ gem 'rest-client'
 gem 'sendgrid-ruby'
 gem 'simplecov'
 gem 'font-awesome-sass'
+gem 'uuid', '~> 2.3', '>= 2.3.8'
 
 group :test do
   gem 'coveralls', require: false
