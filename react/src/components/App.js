@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TodoList from './todolist';
 import AddTodo from './addtodo';
 import TodoSearch from './todosearch';
-const uuidv5 = require('uuid/v4');
+const uuidv4 = require('uuid/v4');
 
 const App = React.createClass ({
   getInitialState() {
@@ -11,16 +11,16 @@ const App = React.createClass ({
       searchText: '',
       todos: [
           {
-          id: uuid(),
+          id: uuidv4(),
           text: 'No Carbs',
           completed: true
         },  {
-          id: uuid(),
+          id: uuidv4(),
           text: 'Run a 5k',
           completed: false
         },
         {
-          id: uuid(),
+          id: uuidv4(),
           text: 'Lose 5 lbs',
           completed: true
         }
@@ -33,7 +33,7 @@ const App = React.createClass ({
       todos: [
         ...this.state.todos,
         {
-          id: uuid(),
+          id: uuidv4(),
           text: text,
           completed: false
         }
