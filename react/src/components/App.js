@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TodoList from './todolist';
 import AddTodo from './addtodo';
 import TodoSearch from './todosearch';
-import uuid from 'node-uuid';
+const uuidv5 = require('uuid/v4');
 
 const App = React.createClass ({
   getInitialState() {
