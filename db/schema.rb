@@ -10,23 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715135313) do
+ActiveRecord::Schema.define(version: 20170719172038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fitbit_data", force: :cascade do |t|
-    t.bigint "user_id"
-    t.text "content"
-    t.string "date"
-    t.string "resource_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["date", "resource_type"], name: "index_fitbit_data_on_date_and_resource_type"
-    t.index ["user_id"], name: "index_fitbit_data_on_user_id"
-  end
-
-  create_table "goals", force: :cascade do |t|
+  create_table "todos_tables", force: :cascade do |t|
     t.string "uuid"
     t.bigint "user_id"
     t.string "text", default: "", null: false
@@ -48,5 +37,4 @@ ActiveRecord::Schema.define(version: 20170715135313) do
     t.string "full_name"
   end
 
-  add_foreign_key "fitbit_data", "users"
 end

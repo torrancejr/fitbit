@@ -4,18 +4,19 @@ import Todo from './todo';
 class TodoList extends Component{
 
   render() {
-    let {todos} = this.props;
-    let renderTodos = () => {
-      return todos.map((todo) => {
+    let todos = this.props;
+    let renderTodos = todos.map(todo => {
         return (
           <Todo
-            key={todo.id} {...todo} onToggle={this.props.onToggle}/>
+            key={todo.uuid} {...todo}
+            onToggle={this.props.onToggle}
+          />
         );
       });
-    };
+
     return(
       <div>
-        {renderTodos()}
+        {renderTodos}
       </div>
 
     )

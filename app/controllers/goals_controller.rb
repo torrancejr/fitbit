@@ -1,4 +1,4 @@
-class GoalsController < ApplicationController
+class TodosController < ApplicationController
 
   def new
   end

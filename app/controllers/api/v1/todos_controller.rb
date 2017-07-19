@@ -1,7 +1,7 @@
 class Api::V1::TodosController < ApplicationController
 
   def index
-    render json: Post.all
+    render json: Todos.all
   end
 
   def destroy
@@ -11,7 +11,7 @@ class Api::V1::TodosController < ApplicationController
   def create
     user = current_user
     body = params[:body]
-    Todo.create(user_id: user.id, text: text, completed: false)
+    Todo.create(user_id: current_user.id, uuid: uuid, text: text, completed: false)
     render json: { post: text }
   end
 

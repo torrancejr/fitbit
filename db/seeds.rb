@@ -35,12 +35,23 @@ user3 = User.create(
   full_name: 'fullname3'
 )
 
-goal1 = Goal.create(
-  body: 'newgoal',
-  user_id: 13
+todo1 = Todo.create(
+uuid: '12345',
+user_id: 1,
+text: 'goals',
+completed: false
 )
 
-goal2 = Goal.create(
-  body: 'newgoal2',
-  user_id: 13
+todo2 = Todo.create(
+uuid: '12346',
+user_id: 2,
+text: 'goals',
+completed: false
+)
+
+todo3 = Todo.create(
+uuid: '12347',
+user_id: 3,
+text: 'goals',
+completed: false
 )
